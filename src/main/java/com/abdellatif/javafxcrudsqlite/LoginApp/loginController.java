@@ -1,14 +1,31 @@
 package com.abdellatif.javafxcrudsqlite.LoginApp;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
-public class loginController {
-    @FXML
-    private Label welcomeText;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+public class loginController implements Initializable {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
+
+    @FXML
+    private ComboBox<Option> comboBox;
+
+    @FXML
+    private Label dbStatus;
+
+    @FXML
+    private Button loginBtn;
+
+    @FXML
+    private PasswordField password;
+
+    @FXML
+    private TextField username;
+
 }
