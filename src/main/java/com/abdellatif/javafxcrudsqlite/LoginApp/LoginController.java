@@ -8,21 +8,10 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class loginController implements Initializable {
+public class LoginController implements Initializable {
 
     LoginModel loginModel = new LoginModel();
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (loginModel.isConnected()) {
-            dbStatus.setText("connected");
-        } else {
-            dbStatus.setText("not connected");
-            dbStatus.setStyle("-fx-text-fill: red");
-            showAlert(Alert.AlertType.ERROR, "Database Connection Error", "Check your database connection");
-        }
-        comboBox.setItems(FXCollections.observableArrayList(Option.values()));
-    }
 
     @FXML
     private ComboBox<Option> comboBox;
@@ -38,6 +27,19 @@ public class loginController implements Initializable {
 
     @FXML
     private TextField username;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        if (loginModel.isConnected()) {
+            dbStatus.setText("connected");
+        } else {
+            dbStatus.setText("not connected");
+            dbStatus.setStyle("-fx-text-fill: red");
+            showAlert(Alert.AlertType.ERROR, "Database Connection Error", "Check your database connection");
+        }
+        comboBox.setItems(FXCollections.observableArrayList(Option.values()));
+        System.out.println("initialize");
+    }
 
     public void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
