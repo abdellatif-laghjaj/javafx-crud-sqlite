@@ -1,4 +1,4 @@
-package com.abdellatif.LoginApp;
+package com.abdellatif.javafxcrudsqlite.LoginApp;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

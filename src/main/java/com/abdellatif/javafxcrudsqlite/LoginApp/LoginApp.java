@@ -1,4 +1,4 @@
-package com.abdellatif.LoginApp;
+package com.abdellatif.javafxcrudsqlite.LoginApp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

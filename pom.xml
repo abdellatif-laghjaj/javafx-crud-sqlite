@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.abdellatif.javafxcrudsqlite/com.abdellatif.LoginApp.LoginApp
+                                com.abdellatif.javafxcrudsqlite/com.abdellatif.javafxcrudsqlite.LoginApp.LoginApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

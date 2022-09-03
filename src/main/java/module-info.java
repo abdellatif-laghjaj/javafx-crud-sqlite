@@ -3,6 +3,6 @@ module com.abdellatif.javafxcrudsqlite {
     requires javafx.fxml;
 
 
-    opens com.abdellatif.LoginApp to javafx.fxml;
-    exports com.abdellatif.LoginApp;
+    opens com.abdellatif.javafxcrudsqlite.LoginApp to javafx.fxml;
+    exports com.abdellatif.javafxcrudsqlite.LoginApp;
 }
