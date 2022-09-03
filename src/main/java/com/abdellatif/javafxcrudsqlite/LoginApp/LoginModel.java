@@ -43,6 +43,10 @@ public class LoginModel {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        finally {
+            pr.close();
+            rs.close();
+        }
         return rs.next();
     }
 }
