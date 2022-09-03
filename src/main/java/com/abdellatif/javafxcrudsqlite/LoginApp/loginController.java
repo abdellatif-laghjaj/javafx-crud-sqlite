@@ -1,5 +1,6 @@
 package com.abdellatif.javafxcrudsqlite.LoginApp;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -20,6 +21,7 @@ public class loginController implements Initializable {
             dbStatus.setStyle("-fx-text-fill: red");
             showAlert(Alert.AlertType.ERROR, "Database Connection Error", "Check your database connection");
         }
+        comboBox.setItems(FXCollections.observableArrayList(Option.values()));
     }
 
     @FXML
