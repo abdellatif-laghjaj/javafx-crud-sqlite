@@ -8,9 +8,18 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
+
+    LoginModel loginModel = new LoginModel();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        if (loginModel.isConnected()) {
+            dbStatus.setText("connected");
+        } else {
+            dbStatus.setText("not connected");
+            dbStatus.setStyle("-fx-text-fill: red");
+            showAlert(Alert.AlertType.ERROR, "Database Connection Error", "Check your database connection");
+        }
     }
 
     @FXML
@@ -27,5 +36,13 @@ public class loginController implements Initializable {
 
     @FXML
     private TextField username;
+
+    public void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.show();
+    }
 
 }
